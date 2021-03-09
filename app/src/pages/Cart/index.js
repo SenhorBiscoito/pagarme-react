@@ -108,7 +108,7 @@ export default function Cart() {
     const name = e.target.name.split('.')[1].replace(/card_/, '');
     const { value } = e.target;
 
-    setCard({ ...card, [name]: value, id: '' });
+    setCard({ ...card, [name]: value });
   }
 
   function handleSelectCard({ id, holder_name, number, expiration_date }) {
@@ -119,6 +119,7 @@ export default function Cart() {
         card_number: number,
         card_expiration_date: expiration_date,
         card_cvv: '',
+        id,
       },
     });
 

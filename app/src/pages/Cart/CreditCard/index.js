@@ -16,12 +16,13 @@ function CreditCards({ onChange }) {
     async function load() {
       try {
         const { data } = await api.get('cards');
+
         setCards(data);
       } catch (err) {}
     }
 
     load();
-  }, []);
+  }, [cards]);
 
   function brandImage(brand) {
     switch (brand) {
@@ -36,6 +37,7 @@ function CreditCards({ onChange }) {
   }
 
   function handleChange(card) {
+    console.log(card);
     onChange(card);
   }
 

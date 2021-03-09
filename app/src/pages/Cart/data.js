@@ -20,6 +20,7 @@ export default {
     card_number: '',
     card_expiration_date: '',
     card_cvv: '',
+    id: undefined,
   },
   // items: [
   //   {
